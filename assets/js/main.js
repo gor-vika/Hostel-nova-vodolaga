@@ -145,12 +145,19 @@ function handleFormSubmit(formId, isBookingForm) {
             })
             .then(data => {
                 showToast('Повідомлення успішно відправлено!', true);
-                clearFormAndCloseModal();
+                nameInput.value = '';
+                phoneInput.value = '';
+                if (isBookingForm) {
+                    roomType.selectedIndex = 0;
+                    dateFrom.value = '';
+                    dateTo.value = '';
+                }
+                setTimeout(() => {
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                }, 100);
             })
-            .catch(error => {
-                console.error('Fetch error:', error);
-                showToast(`Помилка відправки: ${error.message}`, false);
-            });
     });
 }
 

@@ -154,10 +154,20 @@ function handleFormSubmit(formId, isBookingForm) {
       return resp.json();
     }).then(function (data) {
       showToast('Повідомлення успішно відправлено!', true);
-      clearFormAndCloseModal();
-    })["catch"](function (error) {
-      console.error('Fetch error:', error);
-      showToast("\u041F\u043E\u043C\u0438\u043B\u043A\u0430 \u0432\u0456\u0434\u043F\u0440\u0430\u0432\u043A\u0438: ".concat(error.message), false);
+      nameInput.value = '';
+      phoneInput.value = '';
+
+      if (isBookingForm) {
+        roomType.selectedIndex = 0;
+        dateFrom.value = '';
+        dateTo.value = '';
+      }
+
+      setTimeout(function () {
+        if (modal) {
+          modal.style.display = 'none';
+        }
+      }, 100);
     });
   });
 }
