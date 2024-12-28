@@ -732,6 +732,9 @@ footer{
     padding: 15px;
     border: 1px solid $primary-600;
     border-radius: 5px;
+    @media screen and (max-width: 500px){
+        border: none;
+    }
     .date-booking{
         display: none;
     }
@@ -776,6 +779,11 @@ footer{
                     align-items: center;
             
             }
+        }
+    }
+    #roomType {
+        @media screen and (max-width: 500px){
+            margin-bottom: 20px;
         }
     }
 
