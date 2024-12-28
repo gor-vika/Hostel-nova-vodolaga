@@ -745,6 +745,13 @@ footer{
         font-size: 16px; /* Рекомендований мінімальний розмір шрифту */
         min-height: 44px;
     }
+    @media screen and (max-width: 500px){
+        margin: 0;
+        border: none;
+        .date-range{
+            flex-direction: column;
+        }
+    }
     button {
         display: block;
         background-color: $primary-600;
