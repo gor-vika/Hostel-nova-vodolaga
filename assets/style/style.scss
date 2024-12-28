@@ -732,6 +732,9 @@ footer{
     padding: 15px;
     border: 1px solid $primary-600;
     border-radius: 5px;
+    .date-booking{
+        display: none;
+    }
     input[type="text"],
     input[type="tel"],
     input[type="date"],
@@ -745,12 +748,63 @@ footer{
         font-size: 16px; /* Рекомендований мінімальний розмір шрифту */
         min-height: 44px;
     }
+    select{
+        @media screen and (max-width: 500px){
+            opacity: 0;
+        }
+    }
+    .room-type{
+        display: block;
+        width: 100%;
+        position: relative;
+        @media screen and (max-width: 500px){
+            .date-booking{
+                // display: block;
+                
+                    position: absolute;
+                    // width: 100%;
+                    top: 30px;
+                    display: block;
+                    width: 100%;
+                    border: 1px solid $primary-600;
+                    padding: 8px;
+                    border-radius: 4px;
+                    font-size: 16px; /* Рекомендований мінімальний розмір шрифту */
+                    min-height: 44px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+            
+            }
+        }
+    }
+
     @media screen and (max-width: 500px){
         margin: 0;
         border: none;
         .date-range{
             flex-direction: column;
             align-items: stretch;
+            input{
+                opacity: 0;             
+            }
+            label{
+                position: relative;
+            }
+            .date-booking{
+                position: absolute;
+                top: 35px;
+                display: block;
+                width: 100%;
+                border: 1px solid $primary-600;
+                padding: 8px;
+                border-radius: 4px;
+                font-size: 16px; /* Рекомендований мінімальний розмір шрифту */
+                min-height: 44px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
         }
     }
     button {

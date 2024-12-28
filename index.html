@@ -237,8 +237,13 @@
                                     <label for="bookingPhone">Номер телефону:</label>
                                     <input type="tel" id="bookingPhone" name="bookingPhone" required placeholder="+380XXXXXXXXX" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" title="Введіть номер телефону у форматі +380XXXXXXXXX">
                                     <div id="booking-phone-error" class="error-message"></div>
-                                    <label for="roomType">Тип кімнати:</label>
-                                    <select id="roomType" name="roomType" required>
+                                    <label for="roomType" class="room-type">Тип кімнати:
+                                        <div class="date-booking">
+                                            <div>Виберіть тип кімнати</div>
+                                            <div><svg width="26px" height="15px" viewBox="0 0 1024 1024"  class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#996830" stroke="#996830"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#996830"></path></g></svg></div>
+                                        </div>
+                                    </label>
+                                        <select id="roomType" name="roomType" required >
                                         <option value="">Виберіть тип кімнати</option>
                                         <option value="single">1</option>
                                         <option value="double">2</option>
@@ -247,9 +252,19 @@
                                     </select>
                                     <label>Дати перебування:</label>
                                     <div class="date-range">
-                                        <label for="date_from">Від:</label>
+                                        <label for="date_from">Від:
+                                            <div class="date-booking">
+                                                <div>дд.мм.рррр</div>
+                                                <div><svg width="26px" height="26px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#996830"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 0H3V2H1V5H15V2H13V0H10V2H6V0Z" fill="#996830"></path> <path d="M15 7H1V15H15V7Z" fill="#996830"></path> </g></svg></div>
+                                            </div>
+                                        </label>
                                         <input type="date" id="date_from" name="date_from" required>
-                                        <label for="date_to">До:</label>
+                                        <label for="date_to">До:
+                                            <div class="date-booking">
+                                                <div>дд.мм.рррр</div>
+                                                <div><svg width="26px" height="26px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#996830"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 0H3V2H1V5H15V2H13V0H10V2H6V0Z" fill="#996830"></path> <path d="M15 7H1V15H15V7Z" fill="#996830"></path> </g></svg></div>
+                                            </div>
+                                        </label>
                                         <input type="date" id="date_to" name="date_to" required>
                                     </div>
                                     <button type="submit">Забронювати</button>
