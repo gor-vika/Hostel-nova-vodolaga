@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хостел Нова Водолага</title>
+    <meta name="description" content="Хостел Нова Водолага - комфорт і затишок у серці Харківщини">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:local" content="uk">
+    <meta property="og:title" content="ХОСТЕЛ НОВА ВОДОЛАГА">
+    <meta property="og:discription" content="КОМФОРТ І ЗАТИШОК У СЕРЦІ ХАРКІВЩИНИ">
+    <!-- <meta property="og:url" content="https://gor-vika.github.io/homework_beetroot/exam_2/"> -->
+    <!-- <meta property="og:image" content="https://gor-vika.github.io/homework_beetroot/exam_2/assets/img/Image1.png"> -->
+    <meta property="og:image:width" content="580">
+    <meta property="og:image:height" content="438">
+    <link rel="stylesheet" href="assets/plugins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="assets/style/style.min.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div id="toast"></div>
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="assets/img/INTeo.png" alt="logo">
+                        </a>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#about_us">Про нас</a></li>
+                            <li><a href="#services">Послуги</a></li>
+                            <li><a href="#rooms">Номери</a></li>
+                            <li><a href="#contacts-in-footer">Контакти</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-content">
+                    <h1><span>Хостел<br> Нова Водолага</span><br>комфорт і затишок у серці Харківщини</h1>
+                    <div class="header-text">
+                        Хостел Нова Водолага пропонує затишні окремі номери в самому центрі селища. До ваших послуг душ, кухня, пральня та безкоштовний Wi-Fi. Поруч знаходяться супермаркет і кафе. Цілодобове бронювання забезпечить вам зручність у будь-який час.
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="hero-section">
+                <div class="hero-img">
+                    <div class="hero-btn container">
+                        <button type="button" class="open-modal" data-modal="callbackModal">
+                          <svg width="120" height="120" viewBox="0 0 200 200">
+                            <!-- Определение пути для текста -->
+                            <defs>
+                              <path id="circle-path" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" />
+                            </defs>
+                            <!-- Круг -->
+                            <circle cx="100" cy="100" r="80" fill="none" stroke="transparent" />
+                            <!-- Текст по кругу -->
+                            <text>
+                              <textPath href="#circle-path" startOffset="4%">
+                                &middot; Зворотний &middot; дзвінок 
+                              </textPath>
+                            </text>
+                          </svg>
+                        </button>
+                      </div>
+                      <div id="callbackModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Замовте зворотний дзвінок</h2>
+                            <div class="callback-text">Залиште свої дані, і ми зв'яжемося з вами найближчим часом.</div>
+                            <form action="#" method="post" id="callbackForm">
+                                <label for="name">Ім'я:</label>
+                                <input type="text" id="name" name="name" required placeholder="Ваше ім'я">
+                        
+                                <label for="phone">Номер телефону:</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+380XXXXXXXXX" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" title="Введіть номер телефону у форматі +380XXXXXXXXX">
+                                <div id="phone-error" class="error-message"></div>
+                                <!-- <label>Дати перебування:</label>
+                                <div class="date-range">
+                                    <label for="date_from">Від:</label>
+                                    <input type="date" id="date_from" name="date_from" required>
+                        
+                                    <label for="date_to">До:</label>
+                                    <input type="date" id="date_to" name="date_to" required>
+                                </div> -->
+                                <div id="message" class="message"></div>
+                                <button type="submit">Замовити дзвінок</button>
+                            </form>
+                        </div>
+                    </div>
+                      
+                    <img src="assets/img/hero-image.jpg" alt="hero-img">
+                </div>  
+                <div class="container hero-description">
+                    <ul>
+                        <li>Зручне розташування</li>
+                        <li>Все для вашого комфорту</li>
+                        <li>Цілодобове обслуговування</li>
+                        <li>Доступні ціни</li>
+                    </ul>
+                </div>
+            </div>
+            <section id="about_us">
+                <div class="container about-section">
+                    <div class="about-text">
+                        <div class="pre-title">ПРО НАС</div>
+                        <h2 class="title">
+                            Ваш <span>комфортний</span> відпочинок починається тут
+                        </h2>
+                        <div class="main-text">
+                            У нашому хостелі ми ставимо на перше місце комфорт і зручність наших гостей. Незалежно від того, чи ви подорожуєте по роботі, чи просто шукаєте місце для відпочинку, ми створили ідеальну атмосферу для кожного. Просторі номери, дружня команда та зручне розташування — все це допомагає вам розслабитись та насолоджуватись кожним моментом вашої подорожі.
+                        </div>
+
+                    </div>
+                    <div class="about-img">
+                        <div class="img-block img-block-first">
+                            <img src="assets/img/Image.jpg" alt="about image 1">
+                        </div>
+                        <div class="img-block img-block-second">
+                            <img src="assets/img/Image_1.jpg" alt="about image 2">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container metrics-section">
+                <div class="metrics-data">
+                    <div class="metric-item">
+                        <div class="numbr">100%</div>
+                        <div class="content">ЗАДОВОЛЕНИХ ГОСТЕЙ</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="numbr">3</div>
+                        <div class="content">РОКИ ДОСВІДУ</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="numbr">24/7</div>
+                        <div class="content">ПІДТРИМКА ТА ДОПОМОГА</div>
+                    </div>
+                </div>
+            </div>
+            <section id="services">
+                <div class="container service-section">
+                    <div class="pre-title">НАШІ ПОСЛУГИ</div>
+                    <h2 class="title"><span>Хостел Нова Водолага</span> — комфорт, доступність і чудове обслуговування</h2>
+                    <div class="services-block">
+                        <div class="service-item">
+                            <div class="service-item-img">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M42 6H21V12H9V24H6V42H9V27H21V42H24V9H39V42H42V6ZM12 15H21V24H12V15ZM12 30V33H18V30H12ZM15 18H18V21H15V18ZM30 18H27V21H30V18ZM27 30H30V33H27V30ZM30 36H27V39H30V36ZM27 12H30V15H27V12ZM30 24H27V27H30V24ZM33 12H36V15H33V12ZM36 24H33V27H36V24ZM33 18H36V21H33V18ZM36 30H33V33H36V30ZM33 36H36V39H33V36ZM18 39V36H12V39H18Z" fill="#996830"/>
+                                    </svg>                                    
+                            </div>
+                            <div class="service-item-title">
+                                Комфортні умови для відпочинку
+                            </div>
+                            <div class="service-item-text">
+                                У нас ви знайдете не лише чистоту та порядок, а й теплу атмосферу, яка допоможе вам розслабитись. Номери оснащені всім необхідним для комфортного перебування.
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-img">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6H18.3825L29.7183 12.1832L28.2817 14.8168L17.6175 9H9V39H21V27H15V24H27V27H24V39H39V27H33V24H39V9H30V6H42V42H6V6Z" fill="#996830"/>
+                                    </svg>
+                                    
+                            </div>
+                            <div class="service-item-title">
+                                Зручне розташування у центрі міста
+                            </div>
+                            <div class="service-item-text">
+                                Наш хостел знаходиться в самому серці Нової Водолаги, що дозволяє вам легко дістатися до основних туристичних об'єктів, магазинів та кафе. Ваша зручність — наш пріоритет.
+                            </div>                            
+                        </div>
+                        <div class="service-item">
+                            <div class="service-item-img">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.9138 38.0338L41.84 3L7.40332 13.2143L16.0574 22.4865L18.2505 20.4395L12.9046 14.7117L37.4679 7.426L30.3941 32.3922L24.6965 26.8845L22.6114 29.0415L31.9138 38.0338ZM13.1856 25.8733L15.1539 27.8417L24.5933 18.4023L26.7146 20.5237L17.2753 29.963L19.2436 31.9314L9.18658 42.617L2.5 35.9304L13.1856 25.8733ZM13.1223 30.0527L6.8079 35.9956L9.12132 38.3091L15.0643 31.9947L13.1223 30.0527Z" fill="#996830"/>
+                                    </svg>                                    
+                            </div>
+                            <div class="service-item-title">
+                                Розумні ціни для кожного бюджету
+                            </div>
+                            <div class="service-item-text">
+                                Ми пропонуємо доступні ціни для будь-якого бюджету, без компромісів у якості. Ваш комфорт та задоволення — це головне для нас.
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="rooms">
+                <div class="container works-section">
+                    <div class="work_column">
+                        <div>
+                            <div class="pre-title">НОМЕРИ</div>
+                            <h2 class="title"><span>Затишні</span> кімнати для комфортного відпочинку</h2>
+                            <div class="work-img first-column-room">
+                                <img src="assets/img/Image_2.jpg" alt="room_photo">
+                            </div>
+                            <div class="work-title">
+                                Кімнати з двоспальним ліжком
+                            </div>
+                            <div class="work-text">
+                                Просторі та затишні номери, ідеальні для пар чи гостей, які віддають перевагу більшій комфортності. Кожен номер оснащений сучасними меблями та зручностями.
+                            </div>
+                        </div>                     
+                        <div class="btn">
+                            <button type="button" class="open-modal" data-modal="bookingModal">Забронювати
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2928_288)">
+                                <path d="M14.1663 5.83325L5.83301 14.1666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.66699 5.83325H14.167V13.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2928_288">
+                                <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                </a>
+                            </button>
+                        </div>
+                        <div id="bookingModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Забронювати номер</h2>
+                                <form id="bookingForm" action="#" method="post">
+                                    <label for="bookingName">Ім'я:</label>
+                                    <input type="text" id="bookingName" name="bookingName" required placeholder="Ваше ім'я">
+                                    <label for="bookingPhone">Номер телефону:</label>
+                                    <input type="tel" id="bookingPhone" name="bookingPhone" required placeholder="+380XXXXXXXXX" pattern="[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}" title="Введіть номер телефону у форматі +380XXXXXXXXX">
+                                    <div id="booking-phone-error" class="error-message"></div>
+                                    <label for="roomType">Тип кімнати:</label>
+                                    <select id="roomType" name="roomType" required>
+                                        <option value="">Виберіть тип кімнати</option>
+                                        <option value="single">1</option>
+                                        <option value="double">2</option>
+                                        <option value="triple">3</option>
+                                        <option value="family">4</option>
+                                    </select>
+                                    <label>Дати перебування:</label>
+                                    <div class="date-range">
+                                        <label for="date_from">Від:</label>
+                                        <input type="date" id="date_from" name="date_from" required>
+                                        <label for="date_to">До:</label>
+                                        <input type="date" id="date_to" name="date_to" required>
+                                    </div>
+                                    <button type="submit">Забронювати</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_column column-two">
+                        <div>
+                            <div class="work-img second-column-room">
+                                <img src="assets/img/Image_3.jpg" alt="room_photo">
+                            </div>
+                            <div class="work-title">
+                                Стандартні номери
+                            </div>
+                            <div class="work-text">
+                                Затишні номери, які відповідають усім вимогам для приємного відпочинку. Прекрасне поєднання якості та доступності для тих, хто шукає простоту й комфорт.
+                            </div>
+                        </div>
+                        <div>
+                            <div class="room_second_column">
+                                <div class="work-img second-column-room">
+                                    <img src="assets/img/Image_4.jpg" alt="room_photo">
+                                </div>
+                                <div class="work-title">
+                                    Кімнати з роздільними ліжками
+                                </div>
+                                <div class="work-text">
+                                    Оптимальний варіант для друзів чи колег, де кожен має власне місце для відпочинку. У номерах є все необхідне для комфортного перебування.
+                                </div>
+                                <div class="">
+                                </div>
+                                <div class="btn">
+                                    <button type="button" class="open-modal" id="openModal_bron" data-modal="bookingModal">Забронювати
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2928_288)">
+                                            <path d="M14.1663 5.83325L5.83301 14.1666" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.66699 5.83325H14.167V13.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_2928_288">
+                                            <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                        </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </section>
+        </main>
+        <footer id="contacts-in-footer" class="container">
+            <div id="map">
+                
+            </div>
+            <div class="contacts">
+                <div class="adress">
+                    <div class="adress_title">Хостел Нова Водолага</div>
+                    <div class="footer_main_text">Україна, Харківська область, селище Нова Водолага, вул. Кобзарів (Горького), 2</div>
+                </div>
+                <div class="phone">
+                    <div class="footer_main_text">Зателефонуйте нам</div>
+                    <a href="tel:+380936130472">+38 (093) 613-04-72</a>
+                </div>
+                <div class="social">
+                    <span>Ми в соціальних мережах</span>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/profile.php?id=100081076642816" rel="noreferrer, nofollow" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2991_124)">
+                                <path d="M20 10C20 4.47656 15.5234 0 10 0C4.47656 0 0 4.47656 0 10C0 14.9922 3.65625 19.1289 8.4375 19.8789V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29102 9.92969 3.90625 12.2148 3.90625C13.3086 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1914C11.9492 6.5625 11.5625 7.33398 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8789C16.3438 19.1289 20 14.9922 20 10Z" fill="#996830"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_2991_124">
+                                <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/plugins/leaflet/leaflet.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
