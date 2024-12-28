@@ -772,3 +772,12 @@ footer{
 #toast.show {
     opacity: 1;
 }
+@supports (-webkit-touch-callout: none) {
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="month"] {
+        min-height: 3em; /* Або інше значення, яке підходить для вашого дизайну */
+    }
+}
