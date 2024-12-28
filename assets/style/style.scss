@@ -701,7 +701,13 @@ footer{
         margin: 0;
         width: 100vw;
         height: 100vh;
-    } 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+            text-align: right;
+        }
+    }
     h2{
         text-align: center;
         margin-bottom: 20px;
@@ -726,7 +732,6 @@ footer{
     padding: 15px;
     border: 1px solid $primary-600;
     border-radius: 5px;
-    font-size: 1rem;
     input[type="text"],
     input[type="tel"],
     input[type="date"],
@@ -737,6 +742,8 @@ footer{
         border: 1px solid $primary-600;
         border-radius: 4px;
         box-sizing: border-box;
+        font-size: 16px; /* Рекомендований мінімальний розмір шрифту */
+        min-height: 44px;
     }
     button {
         display: block;
@@ -778,11 +785,14 @@ footer{
     opacity: 1;
 }
 @supports (-webkit-touch-callout: none) {
-    input[type="date"],
-    input[type="time"],
-    input[type="datetime-local"],
-    input[type="week"],
-    input[type="month"] {
+    #callbackForm input[type="text"],
+    #callbackForm input[type="tel"],
+    #callbackForm input[type="date"],
+    #bookingForm input[type="text"],
+    #bookingForm input[type="tel"],
+    #bookingForm input[type="date"],
+    #callbackForm select,
+    #bookingForm select {
         min-height: 3em; /* Або інше значення, яке підходить для вашого дизайну */
     }
 }
